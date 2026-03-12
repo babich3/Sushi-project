@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    /* font-family: Arial, sans-serif; */
+    background:black;
+}
+
+.header{
+    padding:20px 0;
+    border-bottom:1px solid #222;
+}
+
+.container{
+    width:1200px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo img{
+    height:200px;
+}
+
+.nav{
+    display:flex;
+    gap:40px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:#ff6b00
+}
+
+
+
+.contact{
+    text-align:right;
+}
+
+.contact p{
+    margin:0;
+    font-size:14px;
+    color:#aaa;
+}
+
+.contact a{
+    color:#ff6b00;
+    font-size:18px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero img{
+    width: 820px;
+    height:500px;
+
+}
+
