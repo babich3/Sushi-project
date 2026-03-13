@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Кошик</title>
+
+    <link rel="stylesheet" href="styles/cartpage.css">
 </head>
+
 <body>
 
-<h1>Ваш кошик</h1>
+<h1 class="title">Ваш кошик</h1>
 
-<a href="index.html">← Назад</a>
+<a class="back-btn" href="index.html">← Назад </a>
 
-<div class="cart-items"></div>
+<div class="cart-container">
+    <div class="cart-items"></div>
 
-<h2 class="total"></h2>
+    <h2 class="total"></h2>
 
-<button onclick="openCheckout()">Оформити замовлення</button>
+    <button class="order-btn" onclick="openCheckout()">Оформити замовлення</button>
+</div>
 
-<div class="checkout" style="display:none; margin-top:20px;">
-    <h3>Оформлення</h3>
-    <input placeholder="Ім'я"><br><br>
-    <input placeholder="Телефон"><br><br>
+<div class="checkout">
+    <h3>Оформлення замовлення</h3>
+
+    <input placeholder="Ваше ім'я">
+    <input placeholder="Телефон">
+
     <button onclick="confirmOrder()">Підтвердити</button>
 </div>
 
 <script src="js/cart.js"></script>
 <script src="js/cartpage.js"></script>
+
 </body>
+</html>
 </html>

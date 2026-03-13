@@ -103,7 +103,7 @@ body{
     display:flex;
     justify-content:center;
     gap:100px;
-    align-items:top;
+    align-items:center;
     line-height:200%;
     flex-wrap:wrap;
 }
