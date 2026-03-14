@@ -176,11 +176,12 @@ border-radius:16px;
 text-align:center;
 }
     .footer{
-background:#ff5e00;
-padding:40px;
-text-align:center;
-color:black;
-margin-top:80px;
+background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);          
+  -webkit-backdrop-filter: blur(10px);  
+  color: #fff;                          
+  padding: 20px;
+  text-align: center;
 }
 
 .footer p{
@@ -245,6 +246,28 @@ left:20px;
 
 .next{
 right:20px;
+}
+
+
+.ticker-wrapper {
+  width: 100%;
+  background-color: #ff0000; 
+  overflow: hidden;          
+  position: relative;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 0;
+  animation: ticker-slide 15s linear infinite;
+}
+
+@keyframes ticker-slide {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
     
