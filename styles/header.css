@@ -6,7 +6,7 @@ body{
 
 .header{
     padding:20px 0;
-    border-bottom:1px solid #222;
+    border-bottom:1px solid #0D0D0E;
 }
 
 .container{
@@ -77,4 +77,8 @@ body{
     align-items: center;
     justify-content: space-between;
     margin: 0 75px;
+}
+
+.prev button:hover{
+  background-color: #ff6b00;
 }
