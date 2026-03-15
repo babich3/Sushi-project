@@ -18,15 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
             total += item.price * item.qty;
 
             container.innerHTML += `
-            <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
-                <h3>${item.name}</h3>
+            <div class="cart-item" style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+                <img src="${item.img}">
+                <h2>${item.name}</h2>
                 <p>${item.price} грн</p>
 
-                <button onclick="changeQty(${item.id}, -1)">-</button>
+                <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
                 ${item.qty}
-                <button onclick="changeQty(${item.id}, 1)">+</button>
+                <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
 
-                <button onclick="removeItem(${item.id})">Видалити</button>
+                <button class="remove-btn" onclick="removeItem(${item.id})">Видалити</button>
             </div>
             `;
         });
@@ -68,4 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     renderCart();
+});
+
+const checkoutBtn = document.querySelector('.checkout-btn');
+checkoutBtn.addEventListener('click', () => {
+    alert('Дякуємо за замовлення! Сума: ' + totalElem.textContent);
 });

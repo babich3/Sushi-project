@@ -82,3 +82,7 @@ body{
 .prev button:hover{
   background-color: #ff6b00;
 }
+
+html {
+    scroll-behavior: smooth;
+}

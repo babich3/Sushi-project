@@ -24,11 +24,11 @@
                 </div>
             </div>
             <nav class="nav">
-                <a href="#">Головна</a>
-                <a href="#">Меню</a>
-                <a href="#">Доставка</a>
-                <a href="#">Акції</a>
-                <a href="#">Контакти</a>
+                <a href="#main">Головна</a>
+                <a href="#menu">Меню</a>
+                <a href="#hero">Доставка</a>
+                <a href="#new">Акції</a>
+                <a href="#contacts">Контакти</a>
             </nav>
       
             <a href="cartpage.html">
@@ -65,7 +65,7 @@
             <img src="екзотк.jpg">
         </div>
     </section>
-    <section class="slider">
+    <section class="slider" id="hero">
 
 <div class="slides">
 
@@ -100,7 +100,7 @@
 
 </section>
 
-    <section class="advantages">
+    <section class="advantages" id="main">
 
 <h2 class="title">Чому обирають Yami Sushi</h2>
 
@@ -129,13 +129,13 @@
     <section class="products">
     <h2 class="title">Наші хіти</h2>
 
-    <div class="products-grid">
+    <div class="products-grid" id="menu">
 
         <div class="product-card">
             <img src="Сет норі.png" alt="">
             <h3>Сет норі</h3>
             <p class="price">500 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(1,'Сет норі',500,'Сет норі.png')"
         data-name="Сет норі"
         data-price="500">
     Додати в кошик
@@ -146,7 +146,7 @@
             <img src="філадельфія.jpg" alt="">
             <h3>Сет Філадельфія</h3>
             <p class="price">350 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(2,'Сет Філадельфія',350,'філадельфія.jpg')"
         data-name="Сет Філадельфія"
         data-price="350">
     Додати в кошик
@@ -157,7 +157,7 @@
             <img src="_Сімейний час 1,9 кг.jpg" alt="">
             <h3>Сет Сімейний</h3>
             <p class="price">550 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(3,'Сет Сімейний',550,'_Сімейний час 1,9 кг.jpg')"
         data-name="Сет Сімейний"
         data-price="550">
     Додати в кошик
@@ -168,7 +168,7 @@
             <img src="Преміум.webp" alt="">
             <h3>Сет Преміум</h3>
             <p class="price">900 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(4,'Сет Преміум',900,'Преміум.webp')"
         data-name="Сет Преміум"
         data-price="900">
     Додати в кошик
@@ -186,13 +186,13 @@
 
 
     <h2 class="title">Наші Акції</h2>
-   <div class="products-grid">
+   <div class="products-grid" id="new">
 
         <div class="product-card">
             <img src="Райська Насолода.jpeg" alt="">
             <h3>Сет Райська Насолода</h3>
             <p class="price">600 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(5,'Сет Райська Насолода',600,'Райська Насолода.jpeg')"
         data-name="Сет Райська Насолода"
         data-price="600">
     Додати в кошик
@@ -203,7 +203,7 @@
             <img src="лайт.png" alt="">
             <h3>Сет Лайт</h3>
             <p class="price">550 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(6,'Сет Лайт',550,'лайт.png')"
         data-name="Сет Лайт"
         data-price="550">
     Додати в кошик
@@ -214,7 +214,7 @@
             <img src="екзотик 2.png" alt="">
             <h3>Сет Екзотик</h3>
             <p class="price">700 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(7,'Сет Екзотик',700,'екзотик 2.png')"
         data-name="Сет Екзотик"
         data-price="700">
     Додати в кошик
@@ -225,7 +225,7 @@
             <img src="задоволення.png" alt="">
             <h3>Сет Задоволення</h3>
             <p class="price">800 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(8,'Сет Задоволення',800,'задоволення.png')"
         data-name="Сет Задоволення"
         data-price="800">
     Додати в кошик
@@ -244,7 +244,7 @@
             <img src="Пепси-removebg-preview.png" alt="">
             <h3>Pepsi 0,5</h3>
             <p class="price">40 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(9,'Pepsi 0,5',40,'Пепси-removebg-preview.png')"
         data-name="Pepsi 0,5"
         data-price="40">
     Додати в кошик
@@ -255,7 +255,7 @@
             <img src="Без_названия__5_-removebg-preview.png" alt="">
             <h3>Sprite 0,5</h3>
             <p class="price">40 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(10,'Sprite 0,5',40,'Без_названия__5_-removebg-preview.png')"
         data-name="Sprite 0,5"
         data-price="40">
     Додати в кошик
@@ -266,7 +266,7 @@
             <img src="Без_названия__6_-removebg-preview.png" alt="">
             <h3>Fanta 0,5</h3>
             <p class="price">40 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(11,'Fanta 0,5',40,'Без_названия__6_-removebg-preview.png')"
         data-name="Fanta 0,5"
         data-price="40">
     Додати в кошик
@@ -277,7 +277,7 @@
             <img src="Сік-removebg-preview.png" alt="">
             <h3>Сік</h3>
             <p class="price">120 грн</p>
-            <button class="btn add-to-cart"
+            <button class="btn add-to-cart" onclick="addToCart(12,'Сік',120,'Сік-removebg-preview.png')"
         data-name="Сік"
         data-price="120">
     Додати в кошик
@@ -289,7 +289,7 @@
     
 
  
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <p>© 2026 Yami Sushi</p>
         <p>Vinnytsia</p>
         <p>Телефон: +38 068 655 53 29</p>
@@ -297,6 +297,7 @@
     
    
     <script src="js/cartpage.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/cart.js"></script>
 </body>
 </html>

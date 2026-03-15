@@ -1,67 +1,35 @@
-const buttons = document.querySelectorAll(".add-to-cart");
-const cartCount = document.querySelector(".cart-count");
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-updateCartCount();
+// ДОДАТИ ТОВАР
+function addToCart(id, name, price, img) {
+    let item = cart.find(p => p.id === id);
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
+    if (item) {
+        item.qty += 1;
+    } else {
+        cart.push({
+            id,
+            name,
+            price,
+            img,
+            qty: 1
+        });
+    }
 
-        const name = button.dataset.name;
-        const price = Number(button.dataset.price);
+    saveCart();
+}
 
-        const item = cart.find(p => p.name === name);
+// ЗБЕРЕГТИ
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
 
-        if (item) {
-            item.qty++;
-        } else {
-            cart.push({
-                name: name,
-                price: price,
-                qty: 1
-            });
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateCartCount();
-    });
-});
-
+// ЛІЧИЛЬНИК
 function updateCartCount() {
-    let total = 0;
-
-    cart.forEach(item => {
-        total += item.qty;
-    });
-
-    cartCount.textContent = total;
+    let count = cart.reduce((sum, item) => sum + item.qty, 0);
+    let el = document.querySelector(".cart-count");
+    if (el) el.textContent = count;
 }
 
-const slides = document.querySelectorAll(".slide");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-
-let current = 0;
-
-function showSlide(index){
-
-slides[current].classList.remove("active");
-
-current = (index + slides.length) % slides.length;
-
-slides[current].classList.add("active");
-
-}
-
-next.addEventListener("click", ()=>{
-
-showSlide(current + 1);
-
-});
-
-prev.addEventListener("click", ()=>{
-
-showSlide(current - 1);
-
-});
+updateCartCount();

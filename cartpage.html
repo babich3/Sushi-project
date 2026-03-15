@@ -2,37 +2,50 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Кошик</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик - Yami Sushi</title>
     <link rel="stylesheet" href="styles/cartpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header>
+        <div class="cart-header">
+            <h1>Ваш кошик</h1>
+            <a href="index.html" class="back-link">← Назад</a>
+        </div>
+    </header>
+ 
+    <main>
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item" style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+                    <h3>wdwd</h3>
+                    <p>dwdwd</p>
+    
+                    <button class="">-</button>
+                    2222
+                    <button >+</button>
+    
+                    <button >Видалити</button>
+                </div>
+            </div>
 
-<h1 class="title">Ваш кошик</h1>
+            <div class="cart-summary">
+                <p>Разом: <span class="total">700 грн</span></p>
+                <button class="checkout-btn">Оформити замовлення</button>
+            </div>
+        </div>
+    </main>
 
-<a class="back-btn" href="index.html">← Назад </a>
+    <footer>
+        <p>© 2026 Yami Sushi</p>
+        <p>Vinnytsia</p>
+        <p>Телефон: +38 068 655 53 29</p>
+    </footer>
 
-<div class="cart-container">
-    <div class="cart-items"></div>
-
-    <h2 class="total"></h2>
-
-    <button class="order-btn" onclick="openCheckout()">Оформити замовлення</button>
-</div>
-
-<div class="checkout">
-    <h3>Оформлення замовлення</h3>
-
-    <input placeholder="Ваше ім'я">
-    <input placeholder="Телефон">
-
-    <button onclick="confirmOrder()">Підтвердити</button>
-</div>
-
-<script src="js/cart.js"></script>
-<script src="js/cartpage.js"></script>
-
+    <script src="js/cart.js"></script>
+    <script src="js/cartpage.js"></script>
 </body>
-</html>
 </html>
